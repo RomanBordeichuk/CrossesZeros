@@ -163,4 +163,5 @@ function fReset(){
     cell9.classList.remove('cross');
 
     player = 1;
+    Player.innerText = 'O';
 }
