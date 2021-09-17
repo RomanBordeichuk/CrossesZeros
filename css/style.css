@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+body{
+    background: #94c47e;
+}
+.container{
+    width: 450px;
+    background: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: #535751;
+}
+.game_area{
+    display: grid;
+    grid: 1fr 1fr 1fr/ 1fr 1fr 1fr;
+}
+.cell{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #94c47e;
+    position: relative;
+}
+.add_info{
+    border: 1px solid #94c47e;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.zero .obj_1{
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #94c47e;
+}
+.zero .obj_2{
+    position: absolute;
+    left: 35px;
+    top: 35px;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+}
+.cross .obj_1{
+    width: 120px;
+    height: 15px;
+    border-radius: 15px;
+    position: absolute;
+    left: 15px;
+    top: 70px;
+    background: #94c47e;
+    transform: rotate(45deg);
+}
+.cross .obj_2{
+    width: 120px;
+    height: 15px;
+    border-radius: 15px;
+    position: absolute;
+    left: 15px;
+    top: 70px;
+    background: #94c47e;
+    transform: rotate(-45deg);
+}
+.color{
+    color: #448226;
+}
