@@ -75,3 +75,6 @@ body{
 .color{
     color: #448226;
 }
+.reset:hover{
+    cursor: pointer;
+}
