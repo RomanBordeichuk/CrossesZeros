@@ -24,6 +24,8 @@ cell9.addEventListener('click', fCell9);
 
 reset.addEventListener('click', fReset);
 
+works = true;
+
 let player = 1;
 let winList = [
     [1, 2, 3],
@@ -50,6 +52,7 @@ function choosing(X, Y){
         };
         if(count >= 3){
             winner.innerHTML = `<span class="color">O</span> wins`;
+            works = false;
             break;
         }
     };
@@ -63,14 +66,15 @@ function choosing(X, Y){
             };
         };
         if(count >= 3){
-            winner.textContent = 'X wins';
+            winner.innerHTML = `<span class="color">X</span> wins`;
+            works = false;
             break;
         }
     };
 };
 
 function fCell1(){
-    if (!cell1.classList.contains('zero') && !cell1.classList.contains('cross')){
+    if (!cell1.classList.contains('zero') && !cell1.classList.contains('cross') && works){
         if (player % 2 == 0){
             cell1.classList.remove('zero');
             cell1.classList.add('cross');
@@ -89,7 +93,7 @@ function fCell1(){
     }
 };
 function fCell2(){
-    if (!cell2.classList.contains('zero') && !cell2.classList.contains('cross')){
+    if (!cell2.classList.contains('zero') && !cell2.classList.contains('cross') && works){
         if (player % 2 == 0){
             cell2.classList.remove('zero');
             cell2.classList.add('cross');
@@ -108,7 +112,7 @@ function fCell2(){
     }
 };
 function fCell3(){
-    if (!cell3.classList.contains('zero') && !cell3.classList.contains('cross')){
+    if (!cell3.classList.contains('zero') && !cell3.classList.contains('cross') && works){
         if (player % 2 == 0){
             cell3.classList.remove('zero');
             cell3.classList.add('cross');
@@ -127,7 +131,7 @@ function fCell3(){
     }
 };
 function fCell4(){
-    if (!cell4.classList.contains('zero') && !cell4.classList.contains('cross')){
+    if (!cell4.classList.contains('zero') && !cell4.classList.contains('cross') && works){
         if (player % 2 == 0){
             cell4.classList.remove('zero');
             cell4.classList.add('cross');
@@ -146,7 +150,7 @@ function fCell4(){
     }
 };
 function fCell5(){
-    if (!cell5.classList.contains('zero') && !cell5.classList.contains('cross')){
+    if (!cell5.classList.contains('zero') && !cell5.classList.contains('cross') && works){
         if (player % 2 == 0){
             cell5.classList.remove('zero');
             cell5.classList.add('cross');
@@ -165,7 +169,7 @@ function fCell5(){
     }
 };
 function fCell6(){
-    if (!cell6.classList.contains('zero') && !cell6.classList.contains('cross')){
+    if (!cell6.classList.contains('zero') && !cell6.classList.contains('cross') && works){
         if (player % 2 == 0){
             cell6.classList.remove('zero');
             cell6.classList.add('cross');
@@ -184,7 +188,7 @@ function fCell6(){
     }
 };
 function fCell7(){
-    if (!cell7.classList.contains('zero') && !cell7.classList.contains('cross')){
+    if (!cell7.classList.contains('zero') && !cell7.classList.contains('cross') && works){
         if (player % 2 == 0){
             cell7.classList.remove('zero');
             cell7.classList.add('cross');
@@ -203,7 +207,7 @@ function fCell7(){
     }
 };
 function fCell8(){
-    if(!cell8.classList.contains('zero') && !cell8.classList.contains('cross')) {
+    if(!cell8.classList.contains('zero') && !cell8.classList.contains('cross') && works){
         if (player % 2 == 0){
             cell8.classList.remove('zero');
             cell8.classList.add('cross');
@@ -222,7 +226,7 @@ function fCell8(){
     }
 };
 function fCell9(){
-    if (!cell9.classList.contains('zero') && !cell9.classList.contains('cross')){
+    if (!cell9.classList.contains('zero') && !cell9.classList.contains('cross') && works){
         if (player % 2 == 0){
             cell9.classList.remove('zero');
             cell9.classList.add('cross');
@@ -263,6 +267,7 @@ function fReset(){
     playListO = [];
     playListX = [];
     winner.textContent = '';
+    works = true;
 
     player = 1;
     Player.innerText = 'O';
